@@ -2,8 +2,8 @@ import asyncio
 from telegram import Update
 from telegram.ext import Application, CommandHandler, CallbackContext
 
-TELEGRAM_BOT_TOKEN = 'BOT_TOKEN'
-ADMIN_USER_ID = 123456789
+TELEGRAM_BOT_TOKEN = '8082716087:AAGV61g-VmcOvqF8DdTLvFh8oZXjGKH3hMI'
+ADMIN_USER_ID = 7374612242
 USERS_FILE = 'users.txt'
 attack_in_progress = False
 
@@ -25,7 +25,8 @@ async def start(update: Update, context: CallbackContext):
     message = (
         "*🔥 Welcome to the battlefield! 🔥*\n\n"
         "*Use /attack <ip> <port> <duration>*\n"
-        "*Let the war begin! ⚔️💥*"
+        
+        "*Let the war begin! BUY FROM 💱 @TRUSTVIP_MOD0 ⚔️💥*"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
@@ -85,7 +86,7 @@ async def attack(update: Update, context: CallbackContext):
     args = context.args
 
     if user_id not in users:
-        await context.bot.send_message(chat_id=chat_id, text="*⚠️ You need to be approved to use this bot.*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*⚠️ You need to be approved @TRUSTVIP_MOD0 to use this bot.*", parse_mode='Markdown')
         return
 
     if attack_in_progress:
@@ -101,6 +102,7 @@ async def attack(update: Update, context: CallbackContext):
         f"*⚔️ Attack Launched! ⚔️*\n"
         f"*🎯 Target: {ip}:{port}*\n"
         f"*🕒 Duration: {duration} seconds*\n"
+        f"🧿 PIAD USER OF @TRUSTVIP_MOD0*\n"
         f"*🔥 Mayhem initiated! Let the battlefield ignite! 💥*"
     ), parse_mode='Markdown')
 
